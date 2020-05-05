@@ -3,6 +3,7 @@
 //
 #include <stdio.h>
 #include <math.h>
+#include "color.h"
 
 void writeData(FILE* image, int width, int height) {
 
@@ -14,11 +15,13 @@ void writeData(FILE* image, int width, int height) {
         }
 
         for (int w = 0; w < width; ++w) {
-            int r = floor(255 * w / (width - 1));
-            int g = floor(255 * h / (height - 1));
-            int b = 255;
+            Color color;
 
-            fprintf(image, "%d %d %d\n", r, g, b);
+            color.r = floor(255 * w / (width - 1));
+            color.g = floor(255 * h / (height - 1));
+            color.b = 255;
+
+            writeColor(color, image);
         }
     }
     printf("\nRENDER COMPLETE\n");
