@@ -8,10 +8,10 @@
 #include <stdio.h>
 
 typedef struct {
-    int r, g, b;
+    double r, g, b;
 } Color;
 
-Color RGBColor(int r, int g, int b);
+Color RGBColor(double r, double g, double b);
 
 void writeColor(Color color, FILE* image);
 

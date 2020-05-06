@@ -3,5 +3,5 @@
 #include "color.h"
 
 int main() {
-    RenderedImage(200, 100);
+    RenderedImage(1920, 1080);
 }

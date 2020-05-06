@@ -2,6 +2,7 @@
 // Created by Dylan Wishner on 5/4/20.
 //
 #include <math.h>
+#include <stdio.h>
 #include "vec3.h"
 
 Vector3 NewVector(double x, double y, double z) {
@@ -11,7 +12,7 @@ Vector3 NewVector(double x, double y, double z) {
 }
 
 double lengthSquared(Vector3 vec) {
-    return pow(vec.x, 2) + pow(vec.y, 2) + pow(vec.z, 1);
+    return pow(vec.x, 2.0) + pow(vec.y, 2.0) + pow(vec.z, 2.0);
 }
 
 double length(Vector3 vec) {
@@ -47,9 +48,9 @@ Vector3 subtractConst(Vector3 vec, double f) {
 }
 
 Vector3 divideConst(Vector3 vec, double f) {
-    return NewVector(vec.x / f, vec.y / f, vec.z / f);
+    return NewVector(vec.x * (1 / f) , vec.y * (1 / f), vec.z * (1 / f));
 }
 
 Vector3 unitVector(Vector3 vec) {
-
+    return divideConst(vec, length(vec));
 }

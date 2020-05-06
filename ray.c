@@ -18,7 +18,9 @@ Point3 pointAt(double t, Ray ray) {
 Color RayColor(Ray ray) {
     Vector3 unitDirection = unitVector(ray.direction);
     double t = 0.5 * (unitDirection.y + 1.0);
-    int r, g, b = 1.0 - t;
+    double r, g, b;
+    r = g = b = 1.0 - t;
+
     r += t * 0.5;
     g += t * 0.7;
     b += t * 1.0;

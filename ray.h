@@ -14,7 +14,7 @@ typedef struct {
 } Ray;
 
 Ray NewRay(Point3 origin, Vector3 direction);
-Point3 pointat(double t, Ray ray);
+Point3 pointAt(double t, Ray ray);
 Color RayColor(Ray ray);
 
 #endif //RAYTRACER_RAY_H
