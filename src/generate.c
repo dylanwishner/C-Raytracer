@@ -30,7 +30,7 @@ void writeData(FILE* image, int width, int height) {
 }
 
 FILE* RenderedImage(int width, int height) {
-    FILE* image = fopen("../image.ppm", "w");
+    FILE* image = fopen("../images/image.ppm", "w");
 
     writeData(image, width, height);
     fclose(image);
