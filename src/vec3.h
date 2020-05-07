@@ -24,5 +24,10 @@ Vector3 subtractConst(Vector3 vec, double f);
 Vector3 divideConst(Vector3 vec, double f);
 
 Vector3 unitVector(Vector3 vec);
+Vector3 crossProduct(Vector3 a, Vector3 b);
+
+double length(Vector3 vec);
+double lengthSquared(Vector3 vec);
+double dotProduct(Vector3 a, Vector3 b);
 
 #endif //RAYTRACER_VEC3_H

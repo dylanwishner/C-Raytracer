@@ -4,6 +4,7 @@
 
 #include "ray.h"
 #include "color.h"
+#include "sphere.h"
 
 Ray NewRay(Point3 origin, Vector3 direction) {
     Ray ray;
@@ -16,6 +17,11 @@ Point3 pointAt(double t, Ray ray) {
 }
 
 Color RayColor(Ray ray) {
+
+    if(hitSphere(NewVector(0, 0, -1), 0.5, ray)) {
+        return RGBColor(1, 0, 0);
+    }
+
     Vector3 unitDirection = unitVector(ray.direction);
     double t = 0.5 * (unitDirection.y + 1.0);
     double r, g, b;
